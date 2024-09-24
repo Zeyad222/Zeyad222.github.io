@@ -1,7 +1,13 @@
-/* styles.css */
-body {
+/* Reset some basic elements */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -10,66 +16,171 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    padding: 20px;
 }
 
+/* Header #007BFF */
 header {
-    background: #333;
+    background: #001F3F;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
 }
 
-header h1 {
-    margin: 0;
+.profile {
+    display: flex;
+    align-items: center;
 }
 
+.profile-pic {
+    width: 150px;
+    /* Increased size */
+    height: 150px;
+    /* Increased size */
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Added shadow */
+}
+
+.profile-info h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    /* Increased size */
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+/* Navigation */
 nav {
-    background: #555;
-    padding: 10px 0;
+    background: #333;
+    color: #fff;
 }
 
 nav ul {
-    padding: 0;
     list-style: none;
+    padding: 10px 0;
     text-align: center;
 }
 
 nav ul li {
     display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
 }
 
 nav ul li a:hover {
-    background: #444;
+    text-decoration: underline;
 }
 
+/* Main Content */
 main {
     background: #fff;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-main h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+h2 {
+    border-bottom: 2px solid #001F3F;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #007BFF;
 }
 
-main ul {
-    padding-left: 20px;
-    list-style: square;
+section {
+    margin-bottom: 20px;
 }
 
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Date styling */
+.date {
+    font-style: italic;
+    color: #666;
+    float: right;
+    /* Align dates to the right */
+}
+
+/* Clearfix for sections with floated elements */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Project alignment */
+section#projects ul {
+    margin-left: 10%;
+}
+
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
     margin-top: 20px;
+    padding: 10px 0;
+    background: #001F3F;
+    color: #fff;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic {
+        margin: 0 0 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.interests-list {
+    display: flex;
+    /* Use Flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow wrapping to next line */
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+}
+
+.interests-list li {
+    margin-right: 15px;
+    /* Space between items */
+    margin-bottom: 10px;
+    /* Space between lines */
+    padding: 5px 10px;
+    /* Padding for each bullet */
+    background: #007BFF;
+    /* Background color for bullets */
+    color: #fff;
+    /* Text color */
+    border-radius: 4px;
+    /* Rounded corners */
 }
