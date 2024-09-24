@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -17,7 +17,19 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Adding transition */
 }
+
+/* Hover state for .container */
+.container:hover {
+
+    /* Lighten the background on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    /* Enhance shadow on hover */
+}
+
+
 
 /* Header #007BFF */
 header {
@@ -97,6 +109,33 @@ h2 {
 section {
     margin-bottom: 20px;
 }
+
+
+
+
+section {
+    border: 1px solid #e0e0e0;
+    /* Light border for sections */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 15px;
+    /* Inner padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+}
+
+
+section:hover {
+    transform: scale(1.02);
+    /* Slightly enlarge section on hover */
+    transition: transform 0.3s;
+}
+
+
+
+
+
+
 
 ul {
     list-style-type: disc;
@@ -183,4 +222,82 @@ footer p {
     /* Text color */
     border-radius: 4px;
     /* Rounded corners */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background: #0056b3;
+    /* Darker blue on hover */
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Aligns items with space between */
+}
+
+.profile-info {
+    flex-grow: 1;
+    /* Allow the profile info to take up available space */
+}
+
+.profile-button {
+    margin-left: auto;
+    /* Push the button to the far right */
+}
+
+
+
+
+
+
+
+/*Add styles specifically for printing to ensure a clean layout*/
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    header,
+    footer {
+        display: none;
+        /* Hide header and footer when printing */
+    }
+
+    main {
+        margin: 0;
+        /* Remove margins */
+        padding: 0;
+        /* Remove padding */
+        box-shadow: none;
+        /* Remove shadow for print */
+    }
+
+    .container {
+        width: 100%;
+        /* Use full width for print */
+    }
+
+    /* Hide any elements you don't want printed */
+    nav {
+        display: none;
+    }
+
+    h2 {
+        color: black;
+        /* Ensure headings are clear */
+    }
 }
