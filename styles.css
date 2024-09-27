@@ -54,6 +54,16 @@ header {
     /* Added shadow */
 }
 
+.profile-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+    /* Add underline on hover for better visibility */
+}
+
 .profile-info h1 {
     margin-bottom: 10px;
     font-size: 2.5em;
@@ -133,7 +143,10 @@ section:hover {
 
 
 
-
+.course {
+    font-style: italic;
+    color: #666;
+}
 
 
 
@@ -239,6 +252,9 @@ footer p {
     background: #0056b3;
     /* Darker blue on hover */
 }
+
+
+
 
 
 .profile {
